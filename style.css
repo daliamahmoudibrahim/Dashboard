@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.grid-container{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template: 0.5fr 1fr  2.5fr /0.5fr repeat(3,1fr);
+}
+.grid-container .header{
+    background-color: white;
+    grid-area: 1/2/2/5;
+    
+}
+.grid-container .sidebar{
+    background-color: rgb(20, 154, 199);
+    grid-area: 1/1/4/2;
+}
+.grid-container .main-content{
+    background-color:lightgray;
+    grid-area: 2/2/4/5;
+    
+}
+/* header content */
+.header .top{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 1.5vh;
+}
+.header .top input{
+   
+    width: 60%;
+    height: 3%;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    outline: none;
+    background-color: lightgray;
+    font-size: larger;
+    margin-bottom: 0.5%;
+}
+.header .top h1{
+    font-size: 2vw;
+}
+
+.header .top h1,input,i{
+    padding-top: 3vh;
+}
+.header .top i{
+    color: gray;
+}
+.header .top img{
+    width: 4vw;
+    height: 4vw;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    
+}
+/* header content bottom */
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    /* margin-bottom: 2vh; */
+}
+.bottom .bottom-content{
+    display: flex;
+}
+.bottom .bottom-content .bottom-text{
+    margin-left: 2vw;
+    margin-top: 1vh;
+    
+}
+.bottom-content .bottom-text h4{
+    font-size: 1vw;
+}
+.bottom-content .bottom-text h1{
+    font-size: 2vw;
+}
+.bottom img{
+    width: 6vw;
+    height: 6vw;
+    border: 1px solid transparent;
+    border-radius: 50%;
+   margin-left: 5vw;
+   position: relative;
+   bottom: 1vh;
+}
+.bottom .buttons{
+    justify-self: end;
+    margin: 2.5vh 5vw;
+ 
+}
+.bottom .buttons button{
+    border:1px solid transparent ;
+    border-radius: 15px;
+    background-color: rgb(20, 154, 199);
+    color: white;
+    padding: 1vh 1vw;
+    margin-left: 0.5vw;
+    cursor: pointer;
+    font-size: 1vw;
+}
+
+
+/* sidebar content */
+.sidebar{
+color: white;
+padding-left: 0.8vw;
+
+font-size: 1em;
+font-weight: bolder;
+
+}
+.sidebar h1{
+   font-size: 1.5em;
+}
+.sidebar h1 i{
+    padding-right: 1.4vw;
+}
+.sidebar ul li:hover{
+font-size: 1.04em;
+padding-left: 0.2vw;
+text-shadow: 7px 7px 9px lightgray;
+cursor: pointer;
+}
+.sidebar h1{
+    padding: 1vh 0px;
+}
+.sidebar h1:hover{
+    cursor: pointer;
+
+}
+.sidebar ul{
+    margin: 1.5vw;
+}
+.sidebar ul li{
+    list-style: none;
+    padding: 0.2vh 0px;
+
+}
+.sidebar ul li i{
+    padding-right: 1.4vw;
+}
+/* main-content */
+.main-content{
+    display: grid;
+    grid-template: repeat(3,1fr)/repeat(2,1fr) 20%;
+}
+.main-content .projects {
+ grid-area: 1/1/4/3;
+ display: flex;
+ flex-flow: row wrap;
+ justify-content: space-evenly;
+}
+.main-content .projects .project{
+    background-color: white;
+    width: 45%;
+    height: 27%;
+    border-radius: 6px;
+    position: relative;
+    margin-top: 2vh;
+    padding-left: 3vh;
+    padding-top: 3vh;
+}
+.main-content .projects .project::before{
+    content:" ";
+    border: 3px solid rgb(236, 170, 28);
+   top: 0;
+   left: 0;
+   bottom: 0;
+position: absolute;
+border-top-left-radius: 10px;
+border-bottom-left-radius: 10px;
+}
+.main-content .projects .project .project-icons{
+    position: absolute;
+    bottom: 2vh;
+    right: 2vw;
+}
+.project .project-icons i{
+    margin-left: 1vw;
+}
+/* announcement */
+.announcements{
+   background-color: white;
+   font-size: 0.75em;
+   margin-top: 2vh;
+   margin-right: 1vw;
+   border-radius: 10px;
+   padding: 1vh 1vw;
+}
+/* trending */
+.trending{
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 2vh;
+    margin-right: 1vw;
+    padding-left: 1.3vw;
+
+}
+.trending .tren{
+    display: flex;
+    padding: 1vh 0px;
+
+}
+.trending .tren .tren-text h3{
+   font-size: 1vw;
+}
+.trending .tren .tren-text p{
+    font-size: 0.75em;
+}
+.trending img{
+    width: 3vw;
+    height: 3vw;
+    margin-right: 1vw;
+    border-radius: 50%;
+}
